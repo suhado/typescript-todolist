@@ -7,12 +7,19 @@ function App() {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  console.log(todo);
+  const handleAdd = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (todo) {
+      setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
+      setTodo("");
+    }
+  };
+  console.log(todos);
 
   return (
     <div className="App">
       <span className="heading">Suha</span>
-      <InputFeild todo={todo} setTodo={setTodo} />
+      <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
     </div>
   );
 }
