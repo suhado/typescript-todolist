@@ -17,7 +17,6 @@ function App() {
       setTodo("");
     }
   };
-  console.log(todos);
 
   return (
     <DragDropContext onDragEnd={() => {}}>
