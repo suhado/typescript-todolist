@@ -23,11 +23,11 @@ const InputFeild: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
         type="input"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
-        placeholder="Enter a task"
+        placeholder="Enter a Task"
         className="input_box"
       />
       <button className="input_submit" type="submit">
-        Go
+        GO
       </button>
     </form>
   );
